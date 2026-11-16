@@ -3,7 +3,7 @@ package Modelo10;
 import java.util.ArrayList;
 
 public class Escola {
-    private String nome = "escola";
+    private String nome = "Escola";
     private ArrayList<Curso> cursos = new ArrayList<>();
 
     public Escola(String nome) {
@@ -25,7 +25,7 @@ public class Escola {
     }
 
     public void exibirEscola(){
-        System.out.println(nome + " | " + "Cursos" + cursos.size() + "/6" + " | " + "Mensalidade total: R$" +calcularMensalidadeTotal());
+        System.out.println(nome + " | " + "Cursos: " + cursos.size() + "/6" + " | " + "Mensalidade total: R$" +calcularMensalidadeTotal());
         for (Curso c : cursos){
             c.exibirInfos();
         }

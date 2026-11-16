@@ -24,7 +24,7 @@ public class CursoOnline extends Curso implements Certificavel {
     @Override
     public void exibirInfos() {
         super.exibirInfos();
-        System.out.println("Certificado" + (certificadoEmitido ? "emitido" : "nao emitido"));
+        System.out.println("Certificado: " + (certificadoEmitido ? "emitido" : "pendente"));
     }
 
 }

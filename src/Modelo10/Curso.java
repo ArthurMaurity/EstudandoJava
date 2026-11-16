@@ -17,11 +17,11 @@ public abstract class Curso {
         if(horas < 60){
             return "Basico";
         } else if (horas <120) {
-            return "intermediario";
-        }  return "avançado";
+            return "Intermediario";
+        }  return "Avançado";
     }
 
     public void exibirInfos(){
-        System.out.println(nome + "|"+horas +" " +classificarNivel()+ " | " + "mensalidade: "+calcularMensalidade());
+        System.out.println(nome + " | "+horas +" (" +classificarNivel()+ ") | " + "Mensalidade: R$"+calcularMensalidade());
     }
 }

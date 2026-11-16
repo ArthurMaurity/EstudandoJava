@@ -20,7 +20,7 @@ public final class CursoPresencial extends Curso {
     @Override
     public void exibirInfos() {
         super.exibirInfos();
-        System.out.println("Vagas: " + vagas + "|" + "Matriculados" + matriculados);
+        System.out.println("Vagas: " + vagas + " | " + "Matriculados: " + matriculados);
     }
 
     @Override
