@@ -1,11 +1,47 @@
 package visao;
+import Modelo10.CursoOnline;
+import Modelo10.CursoPresencial;
+import Modelo10.Escola;
 import Modelo8.*;
 import modelo.*;
 import Modelo2.*;
 
 public class Main {
     public static void main(String[] args) {
-        Cachorro c1 = new Cachorro("rex",3 ,2);
+        CursoOnline cO = new CursoOnline("Ingles", 80);
+        CursoPresencial cP = new CursoPresencial("Espanhol", 100 , 0);
+        CursoPresencial cP2 = new CursoPresencial("Alemão" , 30 , 5);
+        CursoPresencial cP3 = new CursoPresencial("Alemão1" , 130 , 50);
+        CursoOnline c1 = new CursoOnline("Ingles2", 180);
+        CursoOnline c2 = new CursoOnline("Espanhol2", 20);
+        CursoOnline c3 = new CursoOnline("Ingles3", 150);
+        Escola e1 = new Escola("INSP");
+
+        e1.addCurso(cO);
+        System.out.println(e1.addCurso(cO));
+        e1.addCurso(cP);
+        e1.addCurso(cP2);
+        System.out.println(e1.calcularMensalidadeTotal());
+        e1.addCurso(cP3);
+        e1.addCurso(c1);
+        e1.addCurso(c2);
+        System.out.println(e1.addCurso(c3));
+        System.out.println(e1.calcularMensalidadeTotal());
+        System.out.println(cO.emitirCertificado());
+        System.out.println(cO.emitirCertificado());
+        System.out.println(c2.emitirCertificado());
+
+        e1.exibirEscola();
+        e1.calcularMensalidadeTotal();
+
+
+
+
+
+
+
+
+        /*Cachorro c1 = new Cachorro("rex",3 ,2);
         Cachorro c2 = new Cachorro("thor",9 ,3);
         Gato g1 = new Gato("mimi", 1 ,3);
         Hotel h1 = new Hotel("Hotelzada");
