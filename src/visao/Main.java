@@ -1,4 +1,5 @@
 package visao;
+import Modelo10.Certificavel;
 import Modelo10.CursoOnline;
 import Modelo10.CursoPresencial;
 import Modelo10.Escola;
@@ -16,6 +17,7 @@ public class Main {
         CursoOnline c2 = new CursoOnline("Espanhol2", 20);
         CursoOnline c3 = new CursoOnline("Ingles3", 150);
         Escola e1 = new Escola("INSP");
+        Certificavel c = cO;
 
         e1.addCurso(cO);
         System.out.println(e1.addCurso(cO));
@@ -30,6 +32,13 @@ public class Main {
         System.out.println(cO.emitirCertificado());
         System.out.println(cO.emitirCertificado());
         System.out.println(c2.emitirCertificado());
+        cP2.matricularAluno();
+        cP2.matricularAluno();
+        cP2.matricularAluno();
+        cP2.matricularAluno();
+        cP2.matricularAluno();
+        System.out.println(cP2.matricularAluno());
+        c.emitirCertificado();
 
         e1.exibirEscola();
         e1.calcularMensalidadeTotal();
