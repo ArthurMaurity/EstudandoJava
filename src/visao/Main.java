@@ -3,12 +3,44 @@ import Modelo10.Certificavel;
 import Modelo10.CursoOnline;
 import Modelo10.CursoPresencial;
 import Modelo10.Escola;
+import Modelo11.Biblioteca;
+import Modelo11.Emprestavel;
+import Modelo11.Livro;
+import Modelo11.Revista;
 import Modelo8.*;
 import modelo.*;
 import Modelo2.*;
 
 public class Main {
     public static void main(String[] args) {
+        Livro l1 = new Livro("Investido Sardinha", 150, 5);
+        Livro l2 = new Livro("Carioca betinha burro" , 5,-1);
+        Revista r1 = new Revista("Veja", 50);
+        Revista r2 = new Revista("Playboy", 50);
+        Biblioteca b1 = new Biblioteca("Te Atravessa");
+        Emprestavel e = l2;
+
+        b1.addItem(l1);
+        System.out.println(b1.addItem(l2));
+        b1.addItem(r1);
+        b1.addItem(r2);
+        b1.calcularMultaTotal(5);
+        b1.exibirBiblioteca();
+        l1.emprestar();
+        l2.emprestar();
+        l1.calcularMulta(10);
+        l2.calcularMulta(10);
+        l1.classificarTamanho();
+        l2.classificarTamanho();
+        l1.emprestar();
+        l1.emprestar();
+        l2.emprestar();
+        r1.exibirInformacoes();
+        r2.exibirInformacoes();
+        r1.calcularMulta(5);
+        r2.calcularMulta(5);
+
+        /*
         CursoOnline cO = new CursoOnline("Ingles", 80);
         CursoPresencial cP = new CursoPresencial("Espanhol", 100 , 0);
         CursoPresencial cP2 = new CursoPresencial("Alemão" , 30 , 5);
