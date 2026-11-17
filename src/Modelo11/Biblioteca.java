@@ -11,7 +11,7 @@ public class Biblioteca {
     }
 
     public boolean addItem(Item item){
-        if(item!= null && itens.contains(item) && itens.size()<8){
+        if(item!= null && !itens.contains(item) && itens.size()<8){
             itens.add(item);
             return true;
         }return false;
